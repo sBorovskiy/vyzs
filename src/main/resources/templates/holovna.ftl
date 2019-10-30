@@ -38,25 +38,6 @@
                <a class="dropdown-item">019 Компютерна інженерія</a>
                <a class="dropdown-item"></a>
                <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
-               <a class="dropdown-item"></a>
 
              </div>
            </div>
@@ -81,23 +62,44 @@
 	<div class="sidebar" >
 
 	</div>
+	<#list vyzs as vyz>
+
 	<div class="content" >
+<div class="card text-center">
+  <div class="card-header">
+    ${vyz.title}
+  </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
 
 
+    <!-- Example single danger button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Спеціальності
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item">Кібербезпека</a>
+        <a class="dropdown-item">Право</a>
+        <a class="dropdown-item"">Біологія</a>
+        <a class="dropdown-item" >Економіка</a>
+      </div>
     </div>
 
+    </h5>
+    <p class="card-text">${vyz.town}.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
 
-<#list vyzs as vyz>
-    <div class="card" style="width: 18rem;">
-    <div class="card-header">id</div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">${vyz.title}</li>
-        <li class="list-group-item">${vyz.town}</li>
-        <li class="list-group-item">${vyz.passingScore}</li>
-    </ul>
     </div>
-    	</div>
 </#list>
+
+
 	<div class="footer"> info </div>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
